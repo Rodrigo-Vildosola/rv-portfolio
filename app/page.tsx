@@ -11,26 +11,20 @@ const font = Poppins({
   weight: ["600"]
 });
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-radial from-sky-500 to-blue-800">
-      <Navbar />
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-radial from-sky-500 to-blue-800">
       <div className="space-y-6 text-center mt-12">
-        <h1 className={cn(
-          "text-6xl font-bold text-white drop-shadow-md",
-          font.className,
-        )}>
+        <h1 className="text-6xl font-bold text-white drop-shadow-md">
           Rodrigo Vildosola
         </h1>
         <p className="text-xl text-white drop-shadow-md">
           Full Stack Developer
         </p>
-        <div>
-          <Button variant="secondary" size="lg">
-            View My Work
-          </Button>
-        </div>
+        <Button variant="secondary" size="lg">
+          View My Work
+        </Button>
       </div>
-    </main>
+    </div>
   );
 }

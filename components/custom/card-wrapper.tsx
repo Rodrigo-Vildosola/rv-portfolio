@@ -10,6 +10,7 @@ interface CardWrapperProps {
   backButtonLabel: string;
   backButtonHref: string;
   showSocial?: boolean;
+  projectName?: string; // Optional prop for the project name
 }
 
 export const CardWrapper = ({ 
@@ -17,12 +18,13 @@ export const CardWrapper = ({
   headerLabel, 
   backButtonLabel, 
   backButtonHref, 
-  showSocial = false 
+  showSocial = false, 
+  projectName // Optional prop for the project name
 }: CardWrapperProps) => {
   return (
     <Card className="max-w-lg w-full mx-auto my-8 p-4 shadow-md rounded-lg">
       <CardHeader>
-        <Header label={headerLabel} />
+        <Header label={headerLabel} projectName={projectName} />
       </CardHeader>
       <CardContent>
         {children}

@@ -1,8 +1,14 @@
-// components/Footer.tsx
-const Footer = () => (
-  <footer className="bg-gray-800 text-white text-center py-4">
-    <p>© 2024 Rodrigo Vildosola. All rights reserved.</p>
-  </footer>
-);
+// components/user/footer.tsx
+"use client";
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-800 text-white p-4 mt-8">
+      <div className="container mx-auto text-center">
+        <p>© {new Date().getFullYear()} Rodrigo Vildosola. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

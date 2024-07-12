@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 import { contact } from "@/actions/contact";
+import { Textarea } from "@/components/ui/textarea";
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
@@ -72,6 +73,7 @@ const ContactForm = () => {
       headerLabel="Contact Me"
       backButtonLabel="Back to Home"
       backButtonHref="/"
+      projectName="My Portfolio" // Custom project name
       showSocial={false}
     >
       <Form {...form}>
@@ -123,12 +125,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <textarea
+                    <Textarea
                       {...field}
                       disabled={isPending}
                       placeholder="Your message"
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-                    ></textarea>
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
