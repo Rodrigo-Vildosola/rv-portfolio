@@ -82,3 +82,13 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  @apply bg-gradient-radial from-sky-500 to-blue-800 dark:from-blue-700 dark:to-gray-900 text-gray-900 dark:text-gray-100;
+}

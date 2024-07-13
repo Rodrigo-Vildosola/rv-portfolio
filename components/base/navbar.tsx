@@ -37,18 +37,18 @@ const Navbar = () => {
           <Button variant={pathname === "/" ? "default" : "outline"} asChild>
             <Link href="/">Home</Link>
           </Button>
-          <Button variant={pathname === "/about" ? "default" : "outline"} asChild>
-            <Link href="/about">About</Link>
-          </Button>
+          {/* <Button variant={pathname === "/skills" ? "default" : "outline"} asChild>
+            <Link href="/skills">Skills</Link>
+          </Button> */}
           <Button variant={pathname === "/projects" ? "default" : "outline"} asChild>
             <Link href="/projects">Projects</Link>
           </Button>
           <Button variant={pathname === "/contact" ? "default" : "outline"} asChild>
             <Link href="/contact">Contact</Link>
           </Button>
-          <Button variant={pathname === "/experience" ? "default" : "outline"} asChild>
+          {/* <Button variant={pathname === "/experience" ? "default" : "outline"} asChild>
             <Link href="/experience">Experience</Link>
-          </Button>
+          </Button> */}
           <Button variant={pathname === "/resume" ? "default" : "outline"} asChild>
             <Link href="/resume">Resume</Link>
           </Button>

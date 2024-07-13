@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-gradient-radial from-sky-500 to-blue-800 dark:from-blue-700 dark:to-gray-900`}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Toaster />
         <Navbar />
-        <main className="flex-grow flex flex-col items-center justify-center w-full relative mt-8">
-          <div className="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 w-full max-w-6xl mx-auto mt-4">
+        <main className="flex-grow flex flex-col items-center justify-center w-full relative">
+          <div className="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 w-full max-w-6xl mx-auto mt-8">
             {children}
           </div>
         </main>
