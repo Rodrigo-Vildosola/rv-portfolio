@@ -1,17 +1,19 @@
 // components/custom/skills-section.tsx
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import pythonImage from "@/assets/images/skills/python.png";
+import javascriptImage from "@/assets/images/skills/javascript.png";
 
 const skills = [
   {
     name: "Python",
     description: "Experienced with Python for web development, data analysis, and scripting.",
-    image: "/skills/python.png",
+    image: pythonImage,
   },
   {
     name: "JavaScript",
     description: "Proficient in JavaScript for both front-end and back-end development.",
-    image: "/skills/javascript.png",
+    image: javascriptImage,
   },
   // Add more skills as needed
 ];

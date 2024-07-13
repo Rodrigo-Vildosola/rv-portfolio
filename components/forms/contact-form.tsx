@@ -69,7 +69,7 @@ const ContactForm = () => {
       headerLabel="Contact Me"
       backButtonLabel="Back to Home"
       backButtonHref="/"
-      projectName="My Portfolio" // Custom project name
+      projectName="Want to talk to me?" // Custom project name
       showSocial={false}
     >
       <Form {...form}>

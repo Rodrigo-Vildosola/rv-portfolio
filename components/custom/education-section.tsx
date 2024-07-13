@@ -1,19 +1,21 @@
 // components/custom/education-section.tsx
 import Image from "next/image";
 import { Divider } from "@/components/custom/divider";
+import uandesImage from "@/assets/images/education/uandes.png";
+import cvdImage from "@/assets/images/education/cvd.png";
 
 const education = [
   {
     institution: "Universidad De los Andes",
     subheader: "Software Engineering",
     description: "Studying Software Engineering with a focus on web development, data analysis, and machine learning.",
-    image: "/education/uandes.png",
+    image: uandesImage,
     duration: "2020 - 2025",
   },
   {
     institution: "Colegio del Verbo Divino",
     description: "Graduated with a focus on science and mathematics. Active in various extracurricular activities.",
-    image: "/education/cvd.png",
+    image: cvdImage,
     duration: "2005 - 2019",
   },
   // Add more education items as needed

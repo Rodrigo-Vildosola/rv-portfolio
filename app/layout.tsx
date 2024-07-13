@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/base/navbar";
 import Footer from "@/components/base/footer";
-import FloatingButton from "@/components/base/floating-button"; // Import the new component
+import ContactButton from "@/components/base/contact-button"; // Import the new component
 
 import "@/styles/globals.css";
 
@@ -25,13 +25,11 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Toaster />
         <Navbar />
-        <main className="flex-grow flex flex-col items-center justify-center w-full relative">
-          <div className="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 w-full max-w-7xl mx-auto mt-8">
-            {children}
-          </div>
+        <main className="flex-grow flex flex-col items-center justify-center w-full relative mt-8">
+          {children}
         </main>
         <Footer />
-        <FloatingButton /> {/* Use the new component here */}
+        <ContactButton /> {/* Use the new component here */}
       </body>
     </html>
   );

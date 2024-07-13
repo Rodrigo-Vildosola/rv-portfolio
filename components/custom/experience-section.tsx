@@ -1,11 +1,12 @@
 // components/custom/experience-section.tsx
 import Image from "next/image";
 import { Divider } from "@/components/custom/divider";
+import hbsLogo from "@/assets/images/experience/hbs.png";
 
 const experiences = [
   {
     company: "Higher Bit Solutions (HBS)",
-    logo: "/experience/hbs.png",
+    logo: hbsLogo,
     role: "Full-Stack Developer",
     duration: "July 2023 - May 2024",
     description: "Worked as a Full-Stack Developer on web applications, APIs, databases, and Machine Learning.",
@@ -13,6 +14,7 @@ const experiences = [
   },
   // Add more experiences as needed
 ];
+
 
 export default function ExperienceSection() {
   return (
