@@ -42,9 +42,10 @@ export default function HomePage() {
         </Button>
       </section>
 
+
       <Divider />
 
-      <SkillsSection />
+      <ExperienceSection />
 
       <Divider />
 
@@ -52,7 +53,8 @@ export default function HomePage() {
 
       <Divider />
 
-      <ExperienceSection />
+      <SkillsSection />
+
     </div>
   );
 }

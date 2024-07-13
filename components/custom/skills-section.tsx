@@ -6,12 +6,12 @@ const skills = [
   {
     name: "Python",
     description: "Experienced with Python for web development, data analysis, and scripting.",
-    image: "/path/to/python-logo.png",
+    image: "/skills/python.png",
   },
   {
     name: "JavaScript",
     description: "Proficient in JavaScript for both front-end and back-end development.",
-    image: "/path/to/javascript-logo.png",
+    image: "/skills/javascript.png",
   },
   // Add more skills as needed
 ];

@@ -30,25 +30,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white  flex justify-between items-center p-4 rounded-xl w-[calc(100%-2rem)] max-w-7xl mx-auto shadow-lg relative top-4">
+    <nav className="sticky top-0 bg-white dark:bg-gray-800 text-gray-800 dark:text-white  flex justify-between items-center p-4 rounded-xl w-[calc(100%-2rem)] max-w-7xl mx-auto mt-4 shadow-lg z-50">
       <div className="flex items-center space-x-10">
         <h1 className="text-2xl font-bold">Rodrigo Vildosola</h1>
         <div className="flex gap-x-2">
           <Button variant={pathname === "/" ? "default" : "outline"} asChild>
             <Link href="/">Home</Link>
           </Button>
-          {/* <Button variant={pathname === "/skills" ? "default" : "outline"} asChild>
-            <Link href="/skills">Skills</Link>
-          </Button> */}
           <Button variant={pathname === "/projects" ? "default" : "outline"} asChild>
             <Link href="/projects">Projects</Link>
           </Button>
           <Button variant={pathname === "/contact" ? "default" : "outline"} asChild>
             <Link href="/contact">Contact</Link>
           </Button>
-          {/* <Button variant={pathname === "/experience" ? "default" : "outline"} asChild>
-            <Link href="/experience">Experience</Link>
-          </Button> */}
           <Button variant={pathname === "/resume" ? "default" : "outline"} asChild>
             <Link href="/resume">Resume</Link>
           </Button>

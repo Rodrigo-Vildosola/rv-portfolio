@@ -1,17 +1,20 @@
 // components/custom/education-section.tsx
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { Divider } from "@/components/custom/divider";
 
 const education = [
   {
     institution: "Universidad De los Andes",
-    description: "Studying Software Engineering, 2020 - Present",
-    image: "/path/to/andes-logo.png",
+    subheader: "Software Engineering",
+    description: "Studying Software Engineering with a focus on web development, data analysis, and machine learning.",
+    image: "/education/uandes.png",
+    duration: "2020 - 2025",
   },
   {
     institution: "Colegio del Verbo Divino",
-    description: "Class of 2019",
-    image: "/path/to/verbo-logo.png",
+    description: "Graduated with a focus on science and mathematics. Active in various extracurricular activities.",
+    image: "/education/cvd.png",
+    duration: "2005 - 2019",
   },
   // Add more education items as needed
 ];
@@ -20,23 +23,22 @@ export default function EducationSection() {
   return (
     <section className="p-8 w-full">
       <h1 className="text-3xl font-bold mb-6">Education</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="space-y-8">
         {education.map((edu, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <div className="flex items-center space-x-4">
-                {edu.image && (
-                  <Image src={edu.image} alt={`${edu.institution} logo`} width={50} height={50} className="rounded-full" />
-                )}
-                <div>
-                  <CardTitle>{edu.institution}</CardTitle>
-                </div>
+          <div key={index}>
+            <div className="flex items-start space-x-4">
+              {edu.image && (
+                <Image src={edu.image} alt={`${edu.institution} logo`} width={50} height={50} className="rounded-full" />
+              )}
+              <div>
+                <h2 className="text-2xl font-bold">{edu.institution}</h2>
+                {edu.subheader && <h3 className="text-xl text-gray-700 dark:text-gray-400">{edu.subheader}</h3>}
+                <p className="text-gray-500">{edu.duration}</p>
+                <p className="mt-2">{edu.description}</p>
               </div>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>{edu.description}</CardDescription>
-            </CardContent>
-          </Card>
+            </div>
+            {index < education.length - 1 && <Divider />}
+          </div>
         ))}
       </div>
     </section>
