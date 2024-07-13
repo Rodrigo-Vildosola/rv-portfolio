@@ -1,4 +1,3 @@
-"use client";
 import { Card, CardHeader, CardFooter, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/custom/header";
 import { Social } from "@/components/custom/social";

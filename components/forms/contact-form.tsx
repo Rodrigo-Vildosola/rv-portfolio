@@ -6,7 +6,6 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
-import { useSearchParams } from "next/navigation";
 
 import { ContactSchema } from "@/schemas";
 import { Input } from "@/components/ui/input";
@@ -27,10 +26,7 @@ import { contact } from "@/actions/contact";
 import { Textarea } from "@/components/ui/textarea";
 
 const ContactForm = () => {
-  const searchParams = useSearchParams();
-  const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
-    ? "Email already in use with different provider."
-    : "";
+
 
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
@@ -137,7 +133,7 @@ const ContactForm = () => {
               )}
             />
           </div>
-          <FormError message={error || urlError} />
+          <FormError message={error} />
           <FormSuccess message={success} />
           <Button
             disabled={isPending}

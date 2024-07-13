@@ -1,4 +1,4 @@
-// components/user/footer.tsx
+// components/base/footer.tsx
 "use client";
 
 const Footer = () => {
