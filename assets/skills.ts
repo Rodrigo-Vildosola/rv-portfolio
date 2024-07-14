@@ -25,11 +25,22 @@ import tensorflowImage from "@/assets/images/skills/tensorflow.png";
 import kerasImage from "@/assets/images/skills/keras.png";
 import pandasImage from "@/assets/images/skills/pandas.png";
 import numpyImage from "@/assets/images/skills/numpy.png";
+import { StaticImageData } from "next/image";
 
 
-// Add more images as needed
 
-const skills = [
+export interface SkillItem {
+  name: string;
+  descriptionKey: string;
+  image: string | StaticImageData | null;
+}
+
+export interface SkillCategory {
+  category: string;
+  items: SkillItem[];
+}
+
+const skills: SkillCategory[] = [
   {
     category: "Development Concepts",
     items: [

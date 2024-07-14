@@ -31,7 +31,7 @@ export default function SocialSection() {
       <h1 className="text-3xl font-bold mb-6">{t("title")}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 justify-center">
         {socialLinks.map((link: SocialLink, index: number) => (
-          <Button key={index} size="lg" variant="outline" className="h-32 w-full" asChild>
+          <Button key={index} size="lg" variant="outline" className="min-h-32 w-full" asChild>
             <a href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-full w-full">
               {link.icon}
             </a>

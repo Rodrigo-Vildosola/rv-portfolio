@@ -1,6 +1,7 @@
 // app/page.tsx
 
 import { Button } from "@/components/ui/button";
+import { ExpandableText } from '@/components/ui/text';
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
@@ -28,7 +29,7 @@ export default function HomePage() {
   return (
     <div className="space-y-4 mt-12 w-full max-w-7xl mx-auto">
       <Card className="mb-2 bg-white dark:bg-gray-900">
-        <CardHeader className="flex flex-col items-center text-center">
+        <CardHeader className="flex flex-col items-center">
           <Avatar className="h-56 w-56 mb-4">
             <Image 
               src={Me} 
@@ -52,9 +53,6 @@ export default function HomePage() {
           <p className="text-lg text-gray-900 dark:text-gray-300 drop-shadow-md">
             {t('description2')}
           </p>
-          {/* <Button variant="secondary" size="lg">
-            {t('viewWork')}
-          </Button> */}
         </CardContent>
       </Card>
 

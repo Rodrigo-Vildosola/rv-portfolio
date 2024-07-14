@@ -1,7 +1,6 @@
 // app/layout.tsx
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
-import Head from 'next/head';
 
 
 import type { Metadata } from "next";
@@ -34,9 +33,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages}>
 
