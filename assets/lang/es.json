@@ -118,7 +118,9 @@
     "Resume": "Currículum",
     "Language": "Idioma",
     "English": "Inglés",
-    "Spanish": "Español"
+    "Spanish": "Español",
+    "Light Mode": "Claro",
+    "Dark Mode": "Oscuro"
   },
   "Footer": {
     "rights": "Todos los derechos reservados."

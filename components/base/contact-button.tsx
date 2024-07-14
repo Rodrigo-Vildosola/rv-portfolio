@@ -19,13 +19,13 @@ const ContactButton = () => {
     <Dialog>
       <DialogTrigger asChild>
         <button 
-          className={cn("fixed bottom-12 right-12 flex items-center p-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white rounded-full shadow-lg hover:from-purple-500 hover:via-pink-600 hover:to-red-600 focus:outline-none transition-all duration-200", font.className)}
+          className={cn("fixed bottom-6 md:bottom-12 right-6 md:right-12 flex items-center p-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white rounded-full shadow-lg hover:from-purple-500 hover:via-pink-600 hover:to-red-600 focus:outline-none transition-all duration-200", font.className)}
         >
           <span className=" text-2xl mx-2">{t("contact")}</span>
           <PlusIcon className=" font-bold w-8 h-8" />
         </button>
       </DialogTrigger>
-      <DialogContent className='max-w-4xl'>
+      <DialogContent className="max-w-4xl p-4 md:p-8">
         <DialogTitle className="sr-only">{t("contact")}</DialogTitle>
         <DialogDescription className="sr-only">
           {t("description")} {/* Add a description here for accessibility */}

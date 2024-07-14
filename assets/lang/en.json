@@ -118,7 +118,9 @@
     "Resume": "Resume",
     "Language": "Language",
     "English": "English",
-    "Spanish": "Spanish"
+    "Spanish": "Spanish",
+    "Light Mode": "Light",
+    "Dark Mode": "Dark"
   },
   "Footer": {
     "rights": "All rights reserved."

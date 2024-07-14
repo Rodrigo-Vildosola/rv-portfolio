@@ -27,7 +27,7 @@ const font = Poppins({
 export default function HomePage() {
   const t = useTranslations('HomePage');
   return (
-    <div className="space-y-4 mt-12 w-full max-w-7xl mx-auto">
+    <div className="space-y-4 mt-12 w-full max-w-7xl p-3 md:p-0">
       <Card className="mb-2 bg-white dark:bg-gray-900">
         <CardHeader className="flex flex-col items-center">
           <Avatar className="h-56 w-56 mb-4">
