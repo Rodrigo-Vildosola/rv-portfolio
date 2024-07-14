@@ -25,7 +25,7 @@ const ContactButton = () => {
           <PlusIcon className=" font-bold w-8 h-8" />
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl p-4 md:p-8">
+      <DialogContent className="max-w-2xl md:max-w-4xl p-4 md:p-8" onOpenAutoFocus={(e) => e.preventDefault()}>
         <DialogTitle className="sr-only">{t("contact")}</DialogTitle>
         <DialogDescription className="sr-only">
           {t("description")} {/* Add a description here for accessibility */}
