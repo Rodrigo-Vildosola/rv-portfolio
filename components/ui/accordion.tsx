@@ -41,7 +41,7 @@ const AccordionTrigger = React.forwardRef<
         onClick={() => setIsOpen(!isOpen)}
         {...props}
       >
-        <span>{isOpen ? closeLabel : openLabel}</span>
+        <span>{ children } {isOpen ? closeLabel : openLabel} </span>
         {isOpen ? (
           <ChevronUpIcon className="h-6 w-6 shrink-0 text-muted-foreground transition-transform duration-200" />
         ) : (

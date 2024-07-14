@@ -50,25 +50,48 @@
     },
     "Skills": {
       "title": "Skills",
-      "openLabel": "Show more",
-      "closeLabel": "Show less",
+      "openLabel": " more",
+      "closeLabel": " less",
+      "see":"Show",
       "Languages": "Languages",
       "Frameworks": "Frameworks",
+      "Tools and Databases": "Tools and Databases",
+      "Development Concepts": "Development Concepts",
       "pythonDescription": "Experienced with Python for web development, data analysis, and scripting.",
       "javascriptDescription": "Proficient in JavaScript for both front-end and back-end development.",
       "reactDescription": "Skilled in using React for building dynamic user interfaces.",
       "nextjsDescription": "Experienced in building server-rendered applications using Next.js.",
-      "railsDescription": "Experienced with Ruby on Rails for building full-stack web applications.",
+      "rorDescription": "Experienced with Ruby on Rails for building full-stack web applications.",
       "djangoDescription": "Skilled in using Django for creating robust web applications.",
       "flaskDescription": "Proficient in using Flask for lightweight web applications.",
       "cDescription": "Experienced in using C for system programming and low-level applications.",
       "cppDescription": "Proficient in using C++ for object-oriented programming and system applications.",
       "csharpDescription": "Experienced in using C# for building Windows applications and games.",
-      "nodeDescription": "Skilled in using Node.js for server-side JavaScript applications."
+      "sqlDescription": "Experienced",
+      "nodeDescription": "Skilled in using Node.js for server-side JavaScript applications.",
+      "gitDescription": "Proficient in using Git for version control and collaborative development.",
+      "dockerDescription": "Experienced with Docker for containerization and deployment.",
+      "awsDescription": "Skilled in using AWS for cloud computing and infrastructure services.",
+      "postgresqlDescription": "Proficient in managing and querying PostgreSQL databases.",
+      "mongodbDescription": "Experienced in using MongoDB for NoSQL database management.",
+      "mysqlDescription": "Skilled in managing MySQL databases for various applications.",
+      "tensorflowDescription": "Experienced in using TensorFlow for machine learning and deep learning.",
+      "kerasDescription": "Skilled in using Keras for building and training neural networks.",
+      "pandasDescription": "Proficient in using Pandas for data manipulation and analysis.",
+      "numpyDescription": "Experienced in using NumPy for numerical computing and data processing.",
+      "unitTestingDescription": "Skilled in writing unit tests for ensuring code quality and reliability.",
+      "restfulApiDescription": "Experienced in developing RESTful APIs for web services."
     },
     "Social": {
       "title": "Find me on"
     }
+  },
+  "ProjectsPage": {
+    "title": "Projects",
+    "description": "Some of the projects I have worked on.",
+    "openLabel": "Show Details",
+    "closeLabel": "Hide Details",
+    "viewProject": "View Project"
   },
   "ContactPage": {
     "title": "Contact Me",

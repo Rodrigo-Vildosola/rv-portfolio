@@ -66,7 +66,9 @@ export default function SkillsSection() {
                 <AccordionTrigger
                   openLabel={t("openLabel")}
                   closeLabel={t("closeLabel")}
-                />
+                >
+                  {t('see')} {category.items.length - 3} 
+                </AccordionTrigger >
 
               </AccordionItem>
             </Accordion>

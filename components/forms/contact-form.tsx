@@ -88,6 +88,7 @@ const ContactForm = () => {
                       disabled={isPending}
                       placeholder="Rodrigo Vildosola"
                       type="text"
+                      className="mt-1 block w-full shadow-lg"
                     />
                   </FormControl>
                   <FormMessage />
@@ -106,6 +107,7 @@ const ContactForm = () => {
                       disabled={isPending}
                       placeholder="john.doe@email.com"
                       type="email"
+                      className="mt-1 block w-full shadow-lg"
                     />
                   </FormControl>
                   <FormMessage />
@@ -123,7 +125,7 @@ const ContactForm = () => {
                       {...field}
                       disabled={isPending}
                       placeholder="Your message"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                      className="mt-1 block w-full h-24 shadow-lg"
                     />
                   </FormControl>
                   <FormMessage />

@@ -15,12 +15,12 @@ export default function SocialSection() {
   const socialLinks: SocialLink[] = [
     {
       name: "GitHub",
-      url: "https://github.com/yourprofile",
+      url: "https://github.com/Rodrigo-Vildosola",
       icon: <FaGithub className="h-12 w-12" />,
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://linkedin.com/in/rodrigo-vildosola-3b1686318",
       icon: <FaLinkedin className="h-12 w-12" />,
     },
   ];

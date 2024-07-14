@@ -50,25 +50,48 @@
     },
     "Skills": {
       "title": "Habilidades",
-      "openLabel": "Ver mas",
-      "closeLabel": "Ver menos",
+      "openLabel": " mas",
+      "closeLabel": " menos",
+      "see":"Ver ",
       "Languages": "Lenguajes",
       "Frameworks": "Frameworks",
+      "Tools and Databases": "Herramientas y Bases de Datos",
+      "Development Concepts": "Conceptos de Desarrollo",
       "pythonDescription": "Experiencia con Python para desarrollo web, análisis de datos y scripting.",
       "javascriptDescription": "Competente en JavaScript tanto para desarrollo front-end como back-end.",
       "reactDescription": "Habilidad en el uso de React para construir interfaces de usuario dinámicas.",
       "nextjsDescription": "Experiencia en la construcción de aplicaciones renderizadas por servidor utilizando Next.js.",
-      "railsDescription": "Experiencia con Ruby on Rails para construir aplicaciones web full-stack.",
+      "rorDescription": "Experiencia con Ruby on Rails para construir aplicaciones web full-stack.",
       "djangoDescription": "Habilidad en el uso de Django para crear aplicaciones web robustas.",
       "flaskDescription": "Competente en el uso de Flask para aplicaciones web ligeras.",
       "cDescription": "Experiencia en el uso de C para programación de sistemas y aplicaciones de bajo nivel.",
       "cppDescription": "Competente en el uso de C++ para programación orientada a objetos y aplicaciones de sistemas.",
       "csharpDescription": "Experiencia en el uso de C# para construir aplicaciones de Windows y juegos.",
-      "nodeDescription": "Habilidad en el uso de Node.js para aplicaciones JavaScript del lado del servidor."
+      "sqlDescription": "Experienced",
+      "nodeDescription": "Habilidad en el uso de Node.js para aplicaciones JavaScript del lado del servidor.",
+      "gitDescription": "Competente en el uso de Git para control de versiones y desarrollo colaborativo.",
+      "dockerDescription": "Experiencia con Docker para la contenedorización y despliegue.",
+      "awsDescription": "Habilidad en el uso de AWS para servicios de infraestructura y computación en la nube.",
+      "postgresqlDescription": "Competente en la gestión y consulta de bases de datos PostgreSQL.",
+      "mongodbDescription": "Experiencia en el uso de MongoDB para la gestión de bases de datos NoSQL.",
+      "mysqlDescription": "Habilidad en la gestión de bases de datos MySQL para diversas aplicaciones.",
+      "tensorflowDescription": "Experiencia en el uso de TensorFlow para aprendizaje automático y aprendizaje profundo.",
+      "kerasDescription": "Habilidad en el uso de Keras para construir y entrenar redes neuronales.",
+      "pandasDescription": "Competente en el uso de Pandas para manipulación y análisis de datos.",
+      "numpyDescription": "Experiencia en el uso de NumPy para computación numérica y procesamiento de datos.",
+      "unitTestingDescription": "Habilidad en la escritura de pruebas unitarias para garantizar la calidad y fiabilidad del código.",
+      "restfulApiDescription": "Experiencia en el desarrollo de API RESTful para servicios web."
     },
     "Social": {
       "title": "Encuentrame en"
     }
+  },
+  "ProjectsPage": {
+    "title": "Proyectos",
+    "description": "Algunos de los proyectos que he realizado",
+    "openLabel": "Mostrar Detalles",
+    "closeLabel": "Ocultar Detalles",
+    "viewProject": "Ver Proyecto"
   },
   "ContactPage": {
     "title": "Contáctame",

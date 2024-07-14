@@ -31,14 +31,32 @@ import numpyImage from "@/assets/images/skills/numpy.png";
 
 const skills = [
   {
-    category: "Languages",
+    category: "Development Concepts",
     items: [
-      { name: "Python", descriptionKey: "pythonDescription", image: pythonImage },
-      { name: "JavaScript", descriptionKey: "javascriptDescription", image: javascriptImage },
-      { name: "C", descriptionKey: "cDescription", image: cImage },
-      { name: "C++", descriptionKey: "cppDescription", image: cppImage },
-      { name: "C#", descriptionKey: "csharpDescription", image: csharpImage },
-      { name: "SQL", descriptionKey: "sqlDescription", image: sqlImage }, // Add appropriate image
+      { name: "Unit Testing", descriptionKey: "unitTestingDescription", image: null },
+      { name: "RESTful API Development", descriptionKey: "restfulApiDescription", image: null },
+      // Add more high-level concepts as needed
+    ],
+  },
+  {
+    category: "Tools and Databases",
+    items: [
+      { name: "AWS", descriptionKey: "awsDescription", image: awsImage },
+      { name: "Docker", descriptionKey: "dockerDescription", image: dockerImage },
+      { name: "Git", descriptionKey: "gitDescription", image: gitImage },
+      { name: "Pandas", descriptionKey: "pandasDescription", image: pandasImage },
+      { name: "NumPy", descriptionKey: "numpyDescription", image: numpyImage },
+      { name: "PostgreSQL", descriptionKey: "postgresqlDescription", image: postgresqlImage },
+      { name: "MongoDB", descriptionKey: "mongodbDescription", image: mongodbImage },
+      { name: "MySQL", descriptionKey: "mysqlDescription", image: mysqlImage },
+      { name: "TensorFlow", descriptionKey: "tensorflowDescription", image: tensorflowImage },
+      { name: "Keras", descriptionKey: "kerasDescription", image: kerasImage },
+      // { name: "PyTorch", descriptionKey: "pytorchDescription", image: pytorchImage },
+      // { name: "Scikit-Learn", descriptionKey: "sklearnDescription", image: sklearnImage },
+      // { name: "Redis", descriptionKey: "redisDescription", image: redisImage },
+      // { name: "Kubernetes", descriptionKey: "kubernetesDescription", image: kubernetesImage },
+      // { name: "Azure", descriptionKey: "azureDescription", image: azureImage },
+      // { name: "GCP", descriptionKey: "gcpDescription", image: gcpImage },
     ],
   },
   {
@@ -53,36 +71,18 @@ const skills = [
     ],
   },
   {
-    category: "Tools",
+    category: "Languages",
     items: [
-      { name: "Git", descriptionKey: "gitDescription", image: gitImage },
-      { name: "Docker", descriptionKey: "dockerDescription", image: dockerImage },
-      // { name: "Kubernetes", descriptionKey: "kubernetesDescription", image: kubernetesImage },
-      { name: "AWS", descriptionKey: "awsDescription", image: awsImage },
-      // { name: "Azure", descriptionKey: "azureDescription", image: azureImage },
-      // { name: "GCP", descriptionKey: "gcpDescription", image: gcpImage },
+      { name: "Python", descriptionKey: "pythonDescription", image: pythonImage },
+      { name: "JavaScript", descriptionKey: "javascriptDescription", image: javascriptImage },
+      { name: "C", descriptionKey: "cDescription", image: cImage },
+      { name: "C++", descriptionKey: "cppDescription", image: cppImage },
+      { name: "C#", descriptionKey: "csharpDescription", image: csharpImage },
+      { name: "SQL", descriptionKey: "sqlDescription", image: sqlImage }, 
     ],
   },
-  {
-    category: "Databases",
-    items: [
-      { name: "PostgreSQL", descriptionKey: "postgresqlDescription", image: postgresqlImage },
-      { name: "MongoDB", descriptionKey: "mongodbDescription", image: mongodbImage },
-      { name: "MySQL", descriptionKey: "mysqlDescription", image: mysqlImage },
-      // { name: "Redis", descriptionKey: "redisDescription", image: redisImage },
-    ],
-  },
-  {
-    category: "ML",
-    items: [
-      { name: "TensorFlow", descriptionKey: "tensorflowDescription", image: tensorflowImage },
-      // { name: "PyTorch", descriptionKey: "pytorchDescription", image: pytorchImage },
-      // { name: "Scikit-Learn", descriptionKey: "sklearnDescription", image: sklearnImage },
-      { name: "Keras", descriptionKey: "kerasDescription", image: kerasImage },
-      { name: "Pandas", descriptionKey: "pandasDescription", image: pandasImage },
-      { name: "NumPy", descriptionKey: "numpyDescription", image: numpyImage },
-    ],
-  },
+
+
 ];
 
 export default skills;
