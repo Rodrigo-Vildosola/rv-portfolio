@@ -18,6 +18,7 @@
     "viewWork": "Ver Mi Trabajo",
     "Experience": {
       "title": "Experiencia",
+      "contact": "Contacto",
       "items": [
         {
           "company": "Higher Bit Solutions (HBS)",
@@ -49,9 +50,38 @@
     },
     "Skills": {
       "title": "Habilidades",
-      "pythonDescription": "Experto en Python para desarrollo web, análisis de datos y scripting.",
-      "javascriptDescription": "Proficiente en JavaScript para desarrollo front-end y back-end."
+      "openLabel": "Ver mas",
+      "closeLabel": "Ver menos",
+      "Languages": "Lenguajes",
+      "Frameworks": "Frameworks",
+      "pythonDescription": "Experiencia con Python para desarrollo web, análisis de datos y scripting.",
+      "javascriptDescription": "Competente en JavaScript tanto para desarrollo front-end como back-end.",
+      "reactDescription": "Habilidad en el uso de React para construir interfaces de usuario dinámicas.",
+      "nextjsDescription": "Experiencia en la construcción de aplicaciones renderizadas por servidor utilizando Next.js.",
+      "railsDescription": "Experiencia con Ruby on Rails para construir aplicaciones web full-stack.",
+      "djangoDescription": "Habilidad en el uso de Django para crear aplicaciones web robustas.",
+      "flaskDescription": "Competente en el uso de Flask para aplicaciones web ligeras.",
+      "cDescription": "Experiencia en el uso de C para programación de sistemas y aplicaciones de bajo nivel.",
+      "cppDescription": "Competente en el uso de C++ para programación orientada a objetos y aplicaciones de sistemas.",
+      "csharpDescription": "Experiencia en el uso de C# para construir aplicaciones de Windows y juegos.",
+      "nodeDescription": "Habilidad en el uso de Node.js para aplicaciones JavaScript del lado del servidor."
+    },
+    "Social": {
+      "title": "Encuentrame en"
     }
+  },
+  "ContactPage": {
+    "title": "Contáctame",
+    "description": "¡Me encantaría saber de ti! Ya sea que tengas una pregunta sobre mi trabajo, quieras discutir un proyecto o simplemente quieras saludar, no dudes en ponerte en contacto.",
+    "moreInfo": "Aquí hay algunas formas de comunicarte conmigo:",
+    "formTitle": "Escríbeme",
+    "reachOut": "Ponte en contacto conmigo",
+    "emailLabel": "Correo electrónico"
+  },
+  "ResumePage": {
+    "title": "Mi Currículum",
+    "description": "A continuación se muestra mi currículum profesional. Puedes verlo directamente o descargarlo.",
+    "download": "Descargar Currículum"
   },
   "Navbar": {
     "Home": "Inicio",

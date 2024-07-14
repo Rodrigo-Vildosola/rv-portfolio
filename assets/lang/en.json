@@ -18,6 +18,7 @@
     "viewWork": "View My Work",
     "Experience": {
       "title": "Experience",
+      "contact": "Contact",
       "items": [
         {
           "company": "Higher Bit Solutions (HBS)",
@@ -49,9 +50,38 @@
     },
     "Skills": {
       "title": "Skills",
+      "openLabel": "Show more",
+      "closeLabel": "Show less",
+      "Languages": "Languages",
+      "Frameworks": "Frameworks",
       "pythonDescription": "Experienced with Python for web development, data analysis, and scripting.",
-      "javascriptDescription": "Proficient in JavaScript for both front-end and back-end development."
+      "javascriptDescription": "Proficient in JavaScript for both front-end and back-end development.",
+      "reactDescription": "Skilled in using React for building dynamic user interfaces.",
+      "nextjsDescription": "Experienced in building server-rendered applications using Next.js.",
+      "railsDescription": "Experienced with Ruby on Rails for building full-stack web applications.",
+      "djangoDescription": "Skilled in using Django for creating robust web applications.",
+      "flaskDescription": "Proficient in using Flask for lightweight web applications.",
+      "cDescription": "Experienced in using C for system programming and low-level applications.",
+      "cppDescription": "Proficient in using C++ for object-oriented programming and system applications.",
+      "csharpDescription": "Experienced in using C# for building Windows applications and games.",
+      "nodeDescription": "Skilled in using Node.js for server-side JavaScript applications."
+    },
+    "Social": {
+      "title": "Find me on"
     }
+  },
+  "ContactPage": {
+    "title": "Contact Me",
+    "description": "I'd love to hear from you! Whether you have a question about my work, want to discuss a project, or just want to say hi, feel free to get in touch.",
+    "moreInfo": "Here are some ways you can reach out to me:",
+    "formTitle": "Write to Me",
+    "reachOut": "Reach Out to Me",
+    "emailLabel": "Email"
+  },
+  "ResumePage": {
+    "title": "My Resume",
+    "description": "Below is my professional resume. You can view it directly or download it.",
+    "download": "Download Resume"
   },
   "Navbar": {
     "Home": "Home",

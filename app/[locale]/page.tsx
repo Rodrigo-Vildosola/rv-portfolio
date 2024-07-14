@@ -8,6 +8,8 @@ import { useTranslations } from 'next-intl';
 import ExperienceSection from "@/components/custom/experience-section";
 import SkillsSection from "@/components/custom/skills-section";
 import EducationSection from "@/components/custom/education-section";
+import SocialSection from "@/components/custom/social-section";
+
 import {
   Avatar,
   AvatarFallback,
@@ -71,6 +73,13 @@ export default function HomePage() {
       <Card className="mb-2 bg-white dark:bg-gray-900">
         <CardContent>
           <SkillsSection />
+        </CardContent>
+      </Card>
+
+
+      <Card className="mb-2 bg-white dark:bg-gray-900">
+        <CardContent>
+          <SocialSection />
         </CardContent>
       </Card>
     </div>
