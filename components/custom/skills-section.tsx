@@ -1,27 +1,15 @@
 // components/custom/skills-section.tsx
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import pythonImage from "@/assets/images/skills/python.png";
-import javascriptImage from "@/assets/images/skills/javascript.png";
-
-const skills = [
-  {
-    name: "Python",
-    description: "Experienced with Python for web development, data analysis, and scripting.",
-    image: pythonImage,
-  },
-  {
-    name: "JavaScript",
-    description: "Proficient in JavaScript for both front-end and back-end development.",
-    image: javascriptImage,
-  },
-  // Add more skills as needed
-];
+import skills from "@/assets/skills";
+import { useTranslations } from "next-intl";
 
 export default function SkillsSection() {
+  const t = useTranslations("HomePage.Skills");
+
   return (
     <section className="p-8 w-full">
-      <h1 className="text-3xl font-bold mb-6">Skills</h1>
+      <h1 className="text-3xl font-bold mb-6">{t("title")}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
           <Card key={index}>
@@ -36,7 +24,7 @@ export default function SkillsSection() {
               </div>
             </CardHeader>
             <CardContent>
-              <CardDescription>{skill.description}</CardDescription>
+              <CardDescription>{t(skill.descriptionKey)}</CardDescription>
             </CardContent>
           </Card>
         ))}

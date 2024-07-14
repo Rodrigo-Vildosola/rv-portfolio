@@ -6,10 +6,10 @@ import { BackButton } from "@/components/custom/back-button";
 interface CardWrapperProps {
   children: React.ReactNode;
   headerLabel: string;
-  backButtonLabel: string;
-  backButtonHref: string;
+  backButtonLabel?: string;
+  backButtonHref?: string;
   showSocial?: boolean;
-  projectName?: string; // Optional prop for the project name
+  headerTitle?: string; // Optional prop for the project name
 }
 
 export const CardWrapper = ({ 
@@ -18,12 +18,12 @@ export const CardWrapper = ({
   backButtonLabel, 
   backButtonHref, 
   showSocial = false, 
-  projectName // Optional prop for the project name
+  headerTitle // Optional prop for the project name
 }: CardWrapperProps) => {
   return (
     <Card className="max-w-2xl w-full mx-auto my-8 p-4 rounded-lg bg-white dark:bg-gray-900 outline-none border-none shadow-none">
       <CardHeader>
-        <Header label={headerLabel} projectName={projectName} />
+        <Header label={headerLabel} headerTitle={headerTitle} />
       </CardHeader>
       <CardContent>
         {children}
@@ -33,12 +33,14 @@ export const CardWrapper = ({
           <Social />
         </CardFooter>
       )}
-      <CardFooter>
-        <BackButton
-          label={backButtonLabel}
-          href={backButtonHref}
-        />
-      </CardFooter>
+      { backButtonLabel && backButtonHref && (
+        <CardFooter>
+          <BackButton
+            label={backButtonLabel}
+            href={backButtonHref}
+          />
+        </CardFooter>
+      )}
     </Card>
   )
 }

@@ -1,21 +1,67 @@
 {
-    "HomePage": {
-      "title": "Rodrigo Vildosola",
-      "description1": "Desarrollador Full Stack con experiencia en Python, JavaScript y Machine Learning. Apasionado por crear aplicaciones web robustas y explorar nuevas tecnologías.",
-      "description2": "Experto en React, Next.js, Django y Ruby on Rails. Dedicado al aprendizaje continuo y al crecimiento profesional.",
-      "viewWork": "Ver Mi Trabajo"
-    },
-    "Navbar": {
-      "Home": "Inicio",
-      "Projects": "Proyectos",
-      "Contact": "Contacto",
-      "Resume": "Currículum",
-      "Language": "Idioma",
-      "English": "Inglés",
-      "Spanish": "Español"
-    },
-    "Footer": {
-        "rights": "Todos los derechos reservados."
+  "Layout": {
+    "contact": "Hablame",
+    "description": "Dialogo para contacto",
+    "Form": {
+      "contact": "Escribeme aca",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar",
+      "headerTitle": "¿Quieres hablar conmigo?"
     }
+  },
+  "HomePage": {
+    "title": "Rodrigo Vildosola",
+    "description1": "Desarrollador Full Stack con experiencia en Python, JavaScript y Machine Learning. Apasionado por crear aplicaciones web robustas y explorar nuevas tecnologías.",
+    "description2": "Experto en React, Next.js, Django y Ruby on Rails. Dedicado al aprendizaje continuo y al crecimiento profesional.",
+    "viewWork": "Ver Mi Trabajo",
+    "Experience": {
+      "title": "Experiencia",
+      "items": [
+        {
+          "company": "Higher Bit Solutions (HBS)",
+          "role": "Desarrollador Full-Stack",
+          "duration": "Julio 2023 - Mayo 2024",
+          "description": "Trabajé como desarrollador Full-Stack en aplicaciones web, APIs, bases de datos y Machine Learning.",
+          "contact": "pgrand@hbsolutions.cl"
+        }
+      ]
+    },
+    "Education": {
+      "title": "Educación",
+      "items": [
+        {
+          "institution": "Universidad De los Andes",
+          "subheader": "Ingeniería de Software",
+          "description": "Estudiando Ingeniería de Software con un enfoque en desarrollo web, análisis de datos y aprendizaje automático.",
+          "image": "uandes",
+          "duration": "2020 - 2025"
+        },
+        {
+          "institution": "Colegio del Verbo Divino",
+          "description": "Graduado con un enfoque en ciencias y matemáticas. Activo en varias actividades extracurriculares.",
+          "image": "cvd",
+          "duration": "2005 - 2019"
+        }
+      ]
+    },
+    "Skills": {
+      "title": "Habilidades",
+      "pythonDescription": "Experto en Python para desarrollo web, análisis de datos y scripting.",
+      "javascriptDescription": "Proficiente en JavaScript para desarrollo front-end y back-end."
+    }
+  },
+  "Navbar": {
+    "Home": "Inicio",
+    "Projects": "Proyectos",
+    "Contact": "Contacto",
+    "Resume": "Currículum",
+    "Language": "Idioma",
+    "English": "Inglés",
+    "Spanish": "Español"
+  },
+  "Footer": {
+    "rights": "Todos los derechos reservados."
   }
-  
+}

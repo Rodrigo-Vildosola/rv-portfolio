@@ -1,36 +1,24 @@
 // components/custom/education-section.tsx
 import Image from "next/image";
 import { Divider } from "@/components/custom/divider";
+import { useTranslations } from "next-intl";
 import uandesImage from "@/assets/images/education/uandes.png";
 import cvdImage from "@/assets/images/education/cvd.png";
 
-const education = [
-  {
-    institution: "Universidad De los Andes",
-    subheader: "Software Engineering",
-    description: "Studying Software Engineering with a focus on web development, data analysis, and machine learning.",
-    image: uandesImage,
-    duration: "2020 - 2025",
-  },
-  {
-    institution: "Colegio del Verbo Divino",
-    description: "Graduated with a focus on science and mathematics. Active in various extracurricular activities.",
-    image: cvdImage,
-    duration: "2005 - 2019",
-  },
-  // Add more education items as needed
-];
-
 export default function EducationSection() {
+  const t = useTranslations("HomePage.Education");
+
+  const education = t.raw("items");
+
   return (
     <section className="p-8 w-full">
-      <h1 className="text-3xl font-bold mb-6">Education</h1>
+      <h1 className="text-3xl font-bold mb-6">{t("title")}</h1>
       <div className="space-y-8">
-        {education.map((edu, index) => (
+        {education.map((edu: any, index: number) => (
           <div key={index}>
             <div className="flex items-start space-x-4">
               {edu.image && (
-                <Image src={edu.image} alt={`${edu.institution} logo`} width={50} height={50} className="rounded-full" />
+                <Image src={edu.image === "uandes" ? uandesImage : cvdImage} alt={`${edu.institution} logo`} width={50} height={50} className="rounded-full" />
               )}
               <div>
                 <h2 className="text-2xl font-bold">{edu.institution}</h2>

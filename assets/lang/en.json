@@ -1,21 +1,67 @@
 {
-    "HomePage": {
-      "title": "Rodrigo Vildosola",
-      "description1": "Full Stack Developer with expertise in Python, JavaScript, and Machine Learning. Passionate about building robust web applications and exploring new technologies.",
-      "description2": "Skilled in React, Next.js, Django, and Ruby on Rails. Dedicated to continuous learning and professional growth.",
-      "viewWork": "View My Work"
-    },
-    "Navbar": {
-      "Home": "Home",
-      "Projects": "Projects",
-      "Contact": "Contact",
-      "Resume": "Resume",
-      "Language": "Language",
-      "English": "English",
-      "Spanish": "Spanish"
-    },
-    "Footer": {
-        "rights": "All rights reserved."
+  "Layout": {
+    "contact": "Contact Me",
+    "description": "Dialog for contact",
+    "Form": {
+      "contact": "Write to Me",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "headerTitle": "Want to talk to me?"
     }
+  },
+  "HomePage": {
+    "title": "Rodrigo Vildosola",
+    "description1": "Full Stack Developer with expertise in Python, JavaScript, and Machine Learning. Passionate about building robust web applications and exploring new technologies.",
+    "description2": "Skilled in React, Next.js, Django, and Ruby on Rails. Dedicated to continuous learning and professional growth.",
+    "viewWork": "View My Work",
+    "Experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "company": "Higher Bit Solutions (HBS)",
+          "role": "Full-Stack Developer",
+          "duration": "July 2023 - May 2024",
+          "description": "Worked as a Full-Stack Developer on web applications, APIs, databases, and Machine Learning.",
+          "contact": "pgrand@hbsolutions.cl"
+        }
+      ]
+    },
+    "Education": {
+      "title": "Education",
+      "items": [
+        {
+          "institution": "Universidad De los Andes",
+          "subheader": "Software Engineering",
+          "description": "Studying Software Engineering with a focus on web development, data analysis, and machine learning.",
+          "image": "uandes",
+          "duration": "2020 - 2025"
+        },
+        {
+          "institution": "Colegio del Verbo Divino",
+          "description": "Graduated with a focus on science and mathematics. Active in various extracurricular activities.",
+          "image": "cvd",
+          "duration": "2005 - 2019"
+        }
+      ]
+    },
+    "Skills": {
+      "title": "Skills",
+      "pythonDescription": "Experienced with Python for web development, data analysis, and scripting.",
+      "javascriptDescription": "Proficient in JavaScript for both front-end and back-end development."
+    }
+  },
+  "Navbar": {
+    "Home": "Home",
+    "Projects": "Projects",
+    "Contact": "Contact",
+    "Resume": "Resume",
+    "Language": "Language",
+    "English": "English",
+    "Spanish": "Spanish"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
   }
-  
+}

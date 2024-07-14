@@ -8,19 +8,19 @@ const font = Poppins({
 
 interface HeaderProps {
   label: string;
-  projectName?: string; // Optional prop for the project name
+  headerTitle?: string; // Optional prop for the project name
 }
 
-export const Header = ({ label, projectName }: HeaderProps) => {
+export const Header = ({ label, headerTitle }: HeaderProps) => {
   return (
     <div className="w-full flex flex-col gap-y-4 items-center justify-center text-center">
-      {projectName && (
+      {headerTitle && (
         <h1 className={cn(
           'text-3xl md:text-4xl font-bold',
           font.className
           )}
         >
-          {projectName}
+          {headerTitle}
         </h1>
       )}
       <p className='text-muted-foreground text-sm md:text-base'>

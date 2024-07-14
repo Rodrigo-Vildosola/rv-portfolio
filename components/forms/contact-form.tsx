@@ -6,6 +6,7 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
+import { useTranslations } from "next-intl";
 
 import { ContactSchema } from "@/schemas";
 import { Input } from "@/components/ui/input";
@@ -26,8 +27,7 @@ import { contact } from "@/actions/contact";
 import { Textarea } from "@/components/ui/textarea";
 
 const ContactForm = () => {
-
-
+  const t = useTranslations("Layout.Form");
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
@@ -66,10 +66,8 @@ const ContactForm = () => {
 
   return (
     <CardWrapper
-      headerLabel="Contact Me"
-      backButtonLabel="Back to Home"
-      backButtonHref="/"
-      projectName="Want to talk to me?" // Custom project name
+      headerLabel={t("contact")}
+      headerTitle={t("headerTitle")}
       showSocial={false}
     >
       <Form {...form}>
@@ -83,7 +81,7 @@ const ContactForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{t("name")}</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
@@ -101,7 +99,7 @@ const ContactForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t("email")}</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
@@ -119,7 +117,7 @@ const ContactForm = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>{t("message")}</FormLabel>
                   <FormControl>
                     <Textarea
                       {...field}
@@ -140,7 +138,7 @@ const ContactForm = () => {
             type="submit"
             className="w-full"
           >
-            Send
+            {t("submit")}
           </Button>
         </form>
       </Form>
