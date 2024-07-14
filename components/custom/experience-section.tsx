@@ -1,5 +1,5 @@
 // components/custom/experience-section.tsx
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Divider } from "@/components/custom/divider";
 import { useTranslations } from "next-intl";
 import hbsLogo from "@/assets/images/experience/hbs.png";
@@ -10,7 +10,13 @@ interface Experience {
   duration: string;
   description: string;
   contact: string;
+  image?: string;
 }
+
+const imageMap: { [key: string]: StaticImageData } = {
+  hbsLogo: hbsLogo,
+  // Add more image mappings as needed
+};
 
 export default function ExperienceSection() {
   const t = useTranslations("HomePage.Experience");
@@ -24,7 +30,9 @@ export default function ExperienceSection() {
         {experiences.map((experience: Experience, index: number) => (
           <div key={index}>
             <div className="flex items-start space-x-4">
-              <Image src={hbsLogo} alt={`${experience.company} logo`} width={50} height={50} className="rounded-full" />
+              {experience.image && (
+                <Image src={imageMap[experience.image]} alt={`${experience.company} logo`} width={50} height={50} className="rounded-full" />
+              )}
               <div>
                 <h2 className="text-2xl font-semibold">{experience.company}</h2>
                 <h3 className="text-xl">{experience.role}</h3>
