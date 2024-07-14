@@ -108,4 +108,22 @@ body::before {
   filter: invert(0); /* No inversion by default */
 }
 
+@keyframes gradient-border {
+  0% {
+    border-color: #a855f7;
+  }
+  50% {
+    border-color: #ec4899;
+  }
+  100% {
+    border-color: #f87171;
+  }
+}
+
+.animated-gradient-outline {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(45deg, #a855f7, #ec4899, #f87171) 1;
+  animation: gradient-border 3s infinite;
+}
 

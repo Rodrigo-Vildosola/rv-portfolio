@@ -1,0 +1,21 @@
+{
+    "HomePage": {
+      "title": "Rodrigo Vildosola",
+      "description1": "Full Stack Developer with expertise in Python, JavaScript, and Machine Learning. Passionate about building robust web applications and exploring new technologies.",
+      "description2": "Skilled in React, Next.js, Django, and Ruby on Rails. Dedicated to continuous learning and professional growth.",
+      "viewWork": "View My Work"
+    },
+    "Navbar": {
+      "Home": "Home",
+      "Projects": "Projects",
+      "Contact": "Contact",
+      "Resume": "Resume",
+      "Language": "Language",
+      "English": "English",
+      "Spanish": "Spanish"
+    },
+    "Footer": {
+        "rights": "All rights reserved."
+    }
+  }
+  

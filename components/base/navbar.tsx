@@ -3,12 +3,27 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import { usePathname, useRouter } from "next/navigation";
+import { Link } from "@/navigation"; // Updated import
+import { SunIcon, MoonIcon, CheckIcon } from '@heroicons/react/24/outline';
+import { useLocale, useTranslations } from 'next-intl';
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem
+} from '@/components/ui/dropdown-menu';
+
+import Image from 'next/image'; // Import Image component
+import UK from "@/assets/images/flags/uk.png";
+import Spain from "@/assets/images/flags/spain.png";
+
 
 const Navbar = () => {
   const pathname = usePathname();
+  const locale = useLocale();
+  const router = useRouter();
+  const t = useTranslations("Navbar");
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -29,26 +44,67 @@ const Navbar = () => {
     localStorage.setItem("theme", newTheme);
   };
 
+  const switchLocale = (newLocale: string) => {
+    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+    router.push(newPath);
+  };
+
+  const getLanguageLabel = (locale: string) => {
+    return locale === 'en' ? t('English') : t('Spanish');
+  };
+
+  const getLanguageFlag = (locale: string) => {
+    return locale === 'en' ? UK : Spain;
+  };
+
   return (
-    <nav className="sticky top-0 bg-white dark:bg-gray-900 text-gray-800 dark:text-white  flex justify-between items-center p-4 rounded-xl w-[calc(100%-2rem)] max-w-7xl mx-auto mt-4 shadow-lg z-50">
+    <nav className="sticky top-0 bg-white dark:bg-gray-900 text-gray-800 dark:text-white flex justify-between items-center p-4 rounded-xl w-[calc(100%-2rem)] max-w-7xl mx-auto mt-4 shadow-lg z-50">
       <div className="flex items-center space-x-10">
         <h1 className="text-2xl font-bold">Rodrigo Vildosola</h1>
         <div className="flex gap-x-2">
-          <Button variant={pathname === "/" ? "default" : "outline"} asChild>
-            <Link href="/">Home</Link>
+          <Button variant={pathname === `/${locale}` ? "default" : "outline"} asChild>
+            <Link href="/">{t('Home')}</Link>
           </Button>
-          <Button variant={pathname === "/projects" ? "default" : "outline"} asChild>
-            <Link href="/projects">Projects</Link>
+          <Button variant={pathname === `/${locale}/projects` ? "default" : "outline"} asChild>
+            <Link href="/projects">{t('Projects')}</Link>
           </Button>
-          <Button variant={pathname === "/contact" ? "default" : "outline"} asChild>
-            <Link href="/contact">Contact</Link>
+          <Button variant={pathname === `/${locale}/contact` ? "default" : "outline"} asChild>
+            <Link href="/contact">{t('Contact')}</Link>
           </Button>
-          <Button variant={pathname === "/resume" ? "default" : "outline"} asChild>
-            <Link href="/resume">Resume</Link>
+          <Button variant={pathname === `/${locale}/resume` ? "default" : "outline"} asChild>
+            <Link href="/resume">{t('Resume')}</Link>
           </Button>
         </div>
       </div>
-      <div>
+      <div className="flex items-center space-x-4">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              <Image src={getLanguageFlag(locale)} alt={getLanguageLabel(locale)} width={20} height={20} className="mr-2" />
+              {getLanguageLabel(locale)}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem 
+              onClick={() => switchLocale('en')} 
+              disabled={locale === 'en'}
+              className={locale === 'en' ? 'text-gray-400' : ''}
+            >
+              <Image src={UK} alt="UK" width={20} height={20} className="mr-2" />
+              {t('English')}
+              {locale === 'en' && <CheckIcon className="ml-auto w-5 h-5" />}
+            </DropdownMenuItem>
+            <DropdownMenuItem 
+              onClick={() => switchLocale('es')} 
+              disabled={locale === 'es'}
+              className={locale === 'es' ? 'text-gray-400' : ''}
+            >
+              <Image src={Spain} alt="Spain" width={20} height={20} className="mr-2" />
+              {t('Spanish')}
+              {locale === 'es' && <CheckIcon className="ml-auto w-5 h-5" />}
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <button onClick={toggleTheme} className="focus:outline-none">
           {theme === "light" ? (
             <MoonIcon className="w-6 h-6" />

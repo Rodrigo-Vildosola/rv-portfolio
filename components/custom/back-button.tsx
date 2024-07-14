@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import Link from "next/link";
+import { Link } from "@/navigation"; // Updated import
 
 
 interface BackButtonProps {
