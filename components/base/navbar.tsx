@@ -65,12 +65,12 @@ const Navbar = () => {
           <Button variant={pathname === `/${locale}` ? "default" : "outline"} asChild>
             <Link href="/">{t('Home')}</Link>
           </Button>
-          <Button variant={pathname === `/${locale}/projects` ? "default" : "outline"} asChild>
+          {/* <Button variant={pathname === `/${locale}/projects` ? "default" : "outline"} asChild>
             <Link href="/projects">{t('Projects')}</Link>
           </Button>
           <Button variant={pathname === `/${locale}/contact` ? "default" : "outline"} asChild>
             <Link href="/contact">{t('Contact')}</Link>
-          </Button>
+          </Button> */}
           <Button variant={pathname === `/${locale}/resume` ? "default" : "outline"} asChild>
             <Link href="/resume">{t('Resume')}</Link>
           </Button>

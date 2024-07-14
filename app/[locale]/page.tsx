@@ -52,9 +52,9 @@ export default function HomePage() {
           <p className="text-lg text-gray-900 dark:text-gray-300 drop-shadow-md">
             {t('description2')}
           </p>
-          <Button variant="secondary" size="lg">
+          {/* <Button variant="secondary" size="lg">
             {t('viewWork')}
-          </Button>
+          </Button> */}
         </CardContent>
       </Card>
 
@@ -76,6 +76,19 @@ export default function HomePage() {
         </CardContent>
       </Card>
 
+      <Card className="mb-2 bg-white dark:bg-gray-900">
+        <CardContent className="space-y-4">
+          <section className="p-8 w-full">
+            <h1 className="text-3xl font-bold mb-2">{t('aboutMe.title')}</h1>
+            <p className="text-lg text-gray-900 dark:text-gray-300">
+              {t('aboutMe.content1')}
+            </p>
+            <p className="text-lg text-gray-900 dark:text-gray-300">
+              {t('aboutMe.content2')}
+            </p>
+          </section>
+        </CardContent>
+      </Card>
 
       <Card className="mb-2 bg-white dark:bg-gray-900">
         <CardContent>

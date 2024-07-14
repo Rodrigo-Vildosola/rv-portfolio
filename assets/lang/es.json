@@ -13,9 +13,14 @@
   },
   "HomePage": {
     "title": "Rodrigo Vildosola",
-    "description1": "Desarrollador Full Stack con experiencia en Python, JavaScript y Machine Learning. Apasionado por crear aplicaciones web robustas y explorar nuevas tecnologías.",
-    "description2": "Experto en React, Next.js, Django y Ruby on Rails. Dedicado al aprendizaje continuo y al crecimiento profesional.",
+    "description1": "Futuro Ingeniero Civil en Computación con experiencia en desarrollo de software y tecnologías web.",
+    "description2": "Habilidades en Machine Learning, ciberseguridad y análisis de datos. Proactivo, adaptable y motivado para trabajar en equipo.",
     "viewWork": "Ver Mi Trabajo",
+    "aboutMe": {
+      "title": "Sobre Mí",
+      "content1": "Soy un futuro Ingeniero Civil en Computación con casi un año de experiencia en desarrollo de software y tecnologías web. Tengo habilidades en Machine Learning, ciberseguridad y análisis de datos. Soy proactivo, adaptable y altamente motivado por mi trabajo, con una notable capacidad para trabajar en equipo. Actualmente, busco oportunidades en un entorno dinámico que promueva el crecimiento profesional y la innovación tecnológica.",
+      "content2": "Fuera de la programación, disfruto leer sobre nuevas tendencias tecnológicas, ir al gimnasio, pasar tiempo con la familia, salir con amigos y jugar videojuegos."
+    },
     "Experience": {
       "title": "Experiencia",
       "contact": "Contacto",

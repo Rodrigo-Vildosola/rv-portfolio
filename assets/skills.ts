@@ -35,20 +35,20 @@ const skills = [
     items: [
       { name: "Unit Testing", descriptionKey: "unitTestingDescription", image: null },
       { name: "RESTful API Development", descriptionKey: "restfulApiDescription", image: null },
+      { name: "AWS", descriptionKey: "awsDescription", image: awsImage },
+      { name: "Docker", descriptionKey: "dockerDescription", image: dockerImage },
+      { name: "Git", descriptionKey: "gitDescription", image: gitImage },
       // Add more high-level concepts as needed
     ],
   },
   {
     category: "Tools and Databases",
     items: [
-      { name: "AWS", descriptionKey: "awsDescription", image: awsImage },
-      { name: "Docker", descriptionKey: "dockerDescription", image: dockerImage },
-      { name: "Git", descriptionKey: "gitDescription", image: gitImage },
-      { name: "Pandas", descriptionKey: "pandasDescription", image: pandasImage },
-      { name: "NumPy", descriptionKey: "numpyDescription", image: numpyImage },
       { name: "PostgreSQL", descriptionKey: "postgresqlDescription", image: postgresqlImage },
       { name: "MongoDB", descriptionKey: "mongodbDescription", image: mongodbImage },
       { name: "MySQL", descriptionKey: "mysqlDescription", image: mysqlImage },
+      { name: "NumPy", descriptionKey: "numpyDescription", image: numpyImage },
+      { name: "Pandas", descriptionKey: "pandasDescription", image: pandasImage },
       { name: "TensorFlow", descriptionKey: "tensorflowDescription", image: tensorflowImage },
       { name: "Keras", descriptionKey: "kerasDescription", image: kerasImage },
       // { name: "PyTorch", descriptionKey: "pytorchDescription", image: pytorchImage },
