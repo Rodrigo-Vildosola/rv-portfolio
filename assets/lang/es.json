@@ -2,6 +2,7 @@
   "Layout": {
     "contact": "Hablame",
     "description": "Dialogo para contacto",
+    "close": "Cerrar",
     "Form": {
       "contact": "Escribeme aca",
       "name": "Nombre",

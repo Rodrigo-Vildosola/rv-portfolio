@@ -2,6 +2,7 @@
   "Layout": {
     "contact": "Contact Me",
     "description": "Dialog for contact",
+    "close": "Close",
     "Form": {
       "contact": "Write to Me",
       "name": "Name",

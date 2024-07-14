@@ -34,12 +34,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
 
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${inter.className} flex flex-col`}>
         <NextIntlClientProvider messages={messages}>
 
           <Toaster />
-          <Navbar />
           <main className="flex-grow flex flex-col items-center justify-center w-full relative mt-8">
+            <Navbar />
             {children}
           </main>
           <Footer />

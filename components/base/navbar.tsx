@@ -58,6 +58,7 @@ const Navbar = () => {
   };
 
   return (
+
     <nav className="sticky top-0 bg-white dark:bg-gray-900 text-gray-800 dark:text-white flex justify-between items-center p-4 rounded-xl w-[calc(100%-2rem)] max-w-7xl mx-auto mt-4 shadow-lg z-50">
       <div className="flex items-center justify-between w-full">
         <h1 className="text-2xl font-bold">Rodrigo Vildosola</h1>
