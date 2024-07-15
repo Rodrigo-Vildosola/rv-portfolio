@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import { Link } from "@/navigation";
@@ -34,18 +34,18 @@ const Navbar = () => {
     }
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.documentElement.classList.remove(theme);
     document.documentElement.classList.add(newTheme);
     localStorage.setItem("theme", newTheme);
-  };
+  }, [theme]);
 
-  const switchLocale = (newLocale: string) => {
+  const switchLocale = useCallback((newLocale: string) => {
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
     router.push(newPath);
-  };
+  }, [locale, pathname, router]);
 
   const getLanguageLabel = (locale: string) => {
     return locale === 'en' ? t('English') : t('Spanish');
@@ -88,12 +88,12 @@ const Navbar = () => {
               <span>{theme === "light" ? t('Dark Mode') : t('Light Mode')}</span>
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => switchLocale('en')} disabled={locale === 'en'} className={locale === 'en' ? 'text-gray-400' : ''}>
-              <Image src={UK} alt="UK" width={20} height={20} quality={10} loading="lazy" blurDataURL="data:image/png;base64,...(base64 encoded image)..." className="mr-2" />
+              <Image src={UK} alt="UK" width={20} height={20} quality={10} loading="lazy"  className="mr-2" />
               {t('English')}
               {locale === 'en' && <CheckIcon className="ml-auto w-5 h-5" />}
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => switchLocale('es')} disabled={locale === 'es'} className={locale === 'es' ? 'text-gray-400' : ''}>
-              <Image src={Spain} alt="Spain" width={20} height={20} quality={10} loading="lazy" blurDataURL="data:image/png;base64,...(base64 encoded image)..." className="mr-2" />
+              <Image src={Spain} alt="Spain" width={20} height={20} quality={10} loading="lazy"  className="mr-2" />
               {t('Spanish')}
               {locale === 'es' && <CheckIcon className="ml-auto w-5 h-5" />}
             </DropdownMenuItem>
@@ -113,7 +113,7 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">
-              <Image src={getLanguageFlag(locale)} alt={getLanguageLabel(locale)} width={20} height={20} quality={10} loading="lazy" blurDataURL="data:image/png;base64,...(base64 encoded image)..." className="mr-2" />
+              <Image src={getLanguageFlag(locale)} alt={getLanguageLabel(locale)} width={20} height={20} quality={10} loading="lazy"  className="mr-2" />
               {getLanguageLabel(locale)}
             </Button>
           </DropdownMenuTrigger>
@@ -123,7 +123,7 @@ const Navbar = () => {
               disabled={locale === 'en'}
               className={locale === 'en' ? 'text-gray-400' : ''}
             >
-              <Image src={UK} alt="UK" width={20} height={20} quality={10} loading="lazy"  blurDataURL="data:image/png;base64,...(base64 encoded image)..." className="mr-2" />
+              <Image src={UK} alt="UK" width={20} height={20} quality={10} loading="lazy"   className="mr-2" />
               {t('English')}
               {locale === 'en' && <CheckIcon className="ml-auto w-5 h-5" />}
             </DropdownMenuItem>
@@ -132,7 +132,7 @@ const Navbar = () => {
               disabled={locale === 'es'}
               className={locale === 'es' ? 'text-gray-400' : ''}
             >
-              <Image src={Spain} alt="Spain" width={20} height={20} quality={10} loading="lazy"  blurDataURL="data:image/png;base64,...(base64 encoded image)..." className="mr-2" />
+              <Image src={Spain} alt="Spain" width={20} height={20} quality={10} loading="lazy"   className="mr-2" />
               {t('Spanish')}
               {locale === 'es' && <CheckIcon className="ml-auto w-5 h-5" />}
             </DropdownMenuItem>
@@ -150,4 +150,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default  React.memo(Navbar);
