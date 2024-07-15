@@ -1,5 +1,4 @@
 // components/base/footer.tsx
-"use client";
 import { useTranslations } from "next-intl";
 
 const Footer = () => {
