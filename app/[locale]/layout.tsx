@@ -1,7 +1,7 @@
 // app/layout.tsx
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -41,6 +41,7 @@ export default async function LocaleLayout({
           <main className="flex-grow flex flex-col items-center justify-center w-full relative mt-8">
             <Navbar />
             {children}
+            <SpeedInsights />
           </main>
           <Footer />
           <ContactButton /> {/* Use the new component here */}

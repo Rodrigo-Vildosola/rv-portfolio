@@ -24,7 +24,11 @@ const font = Poppins({
   weight: ["600"]
 });
 
-export default function HomePage() {
+import skills from '@/assets/skills';
+
+
+
+export default function HomePage() { // Accept skills as a prop
   const t = useTranslations('HomePage');
   return (
     <div className="space-y-4 mt-12 w-full max-w-7xl p-3 md:p-0">
@@ -70,7 +74,7 @@ export default function HomePage() {
 
       <Card className="mb-2 bg-white dark:bg-gray-900">
         <CardContent>
-          <SkillsSection />
+          <SkillsSection skills={skills} /> {/* Pass skills data here */}
         </CardContent>
       </Card>
 
