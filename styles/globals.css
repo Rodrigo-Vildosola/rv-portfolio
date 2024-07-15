@@ -94,35 +94,39 @@ body {
   background-attachment: fixed;
 }
 
-
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/images/shapes/pattern-lines.svg') no-repeat center center;
-  background-size: cover;
+  width: 200%; /* Make it twice as wide to allow for smooth animation */
+  height: 200%; /* Make it twice as tall to allow for smooth animation */
+  background: url('/images/shapes/waves-white.svg') repeat center center;
+  background-size: 50%; /* Adjust to control the size of the pattern */
   z-index: -1;
+  opacity: 1; /* Adjust the opacity to make the pattern subtle */
 }
 
-@keyframes gradient-border {
+body::before {
+  filter: hue-rotate(120deg); /* Apply a color filter */
+  animation: movePatternDiagonal 20s linear infinite;
+}
+
+
+@keyframes movePatternDiagonal {
   0% {
-    border-color: #a855f7;
-  }
-  50% {
-    border-color: #ec4899;
+    transform: translate(0, 0);
   }
   100% {
-    border-color: #f87171;
+    transform: translate(-50%, -50%);
   }
 }
 
-.animated-gradient-outline {
-  border-width: 2px;
-  border-style: solid;
-  border-image: linear-gradient(45deg, #a855f7, #ec4899, #f87171) 1;
-  animation: gradient-border 3s infinite;
+@keyframes movePatternDiagonalReverse {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50%, 50%);
+  }
 }
-

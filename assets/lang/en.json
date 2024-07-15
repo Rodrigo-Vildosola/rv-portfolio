@@ -14,7 +14,8 @@
   },
   "HomePage": {
     "title": "Rodrigo Vildosola",
-    "description1": "Future Civil Engineer in Computer Science with experience in software development and web technologies.",
+    "subtitle": "Software Engineer",
+    "description1": "Full-Stack Web development and Software Design.",
     "description2": "Skilled in Machine Learning, cybersecurity, and data analysis. Proactive, adaptable, and motivated team player.",
     "viewWork": "View My Work",
     "aboutMe": {
