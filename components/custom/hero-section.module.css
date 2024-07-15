@@ -39,3 +39,30 @@
 .move-right-to-left {
   animation: moveRightToLeft 10s linear infinite;
 }
+
+
+@keyframes infiniteLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes infiniteRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.infinite-left-to-right {
+  animation: infiniteLeftToRight 20s linear infinite;
+}
+
+.infinite-right-to-left {
+  animation: infiniteRightToLeft 20s linear infinite;
+}
