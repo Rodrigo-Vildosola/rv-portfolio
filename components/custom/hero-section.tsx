@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
       <div className="flex flex-col h-full">
         {/* Top Section */}
         <div className="flex h-48 md:h-64 rounded-md px-10 md:px-20 py-5 md:py-10 justify-center items-center relative ">
-          <div className={cn("h-full w-full text-gray-800 dark:text-gray-100 sm:bg-gradient-radial md:bg-gradient-to-r flex-col overflow-hidden from-sky-500 to-blue-800 dark:from-blue-700 dark:to-gray-900 rounded-md flex justify-center items-center", font.className)}>
+          <div className={cn("h-full w-full text-gray-100 dark:text-gray-100 bg-gradient-to-r from-blue-700 to-gray-900 dark:from-blue-700 dark:to-gray-900 rounded-md flex flex-col overflow-hidden justify-center items-center", font.className)}>
             <div className={cn(styles['move-left-to-right'], "text-xl whitespace-nowrap ")} style={{ animationDuration: `${getRandomSpeed()}s` }}>
               <span className="mx-6 md:mx-10">Unit Testing</span>
               <span className="mx-6 md:mx-10">RESTful API Development</span>
