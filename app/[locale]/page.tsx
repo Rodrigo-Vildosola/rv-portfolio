@@ -34,6 +34,7 @@ export default function HomePage({
     <div className="space-y-4 mt-12 w-full max-w-7xl p-3 md:p-0">
       <HeroSection font={font} />
 
+
       <Card className="mb-2 bg-white dark:bg-gray-900">
         <CardContent>
           <ExperienceSection />

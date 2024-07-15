@@ -19,7 +19,7 @@ const ProjectCard = ({ title, description, link, image, details }: ProjectCardPr
     <Card className="border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
       {image && (
         <div className="relative w-full h-56">
-          <Image src={image} alt={title} layout="fill" objectFit="cover" className="rounded-t-lg" />
+          <Image src={image} alt={title} width={200} height={200} className="rounded-t-lg" />
         </div>
       )}
       <CardHeader className="bg-gray-100 dark:bg-gray-700 p-4">

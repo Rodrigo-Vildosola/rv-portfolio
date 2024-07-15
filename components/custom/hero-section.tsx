@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import Me from "@/assets/images/avatar/me.png";
-import styles from './hero-section.module.css'; // Import the CSS module
+import styles from '@/styles/hero-section.module.css'; // Import the CSS module
 
 interface HeroSectionProps {
   font: {

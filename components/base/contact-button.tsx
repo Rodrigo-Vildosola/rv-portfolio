@@ -13,8 +13,6 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerDescription,
-  DrawerFooter,
-  DrawerClose
 } from '@/components/ui/drawer';
 import ContactForm from '@/components/forms/contact-form';
 import { useTranslations } from "next-intl";
@@ -28,12 +26,11 @@ const font = Poppins({
 const ContactButton = () => {
   const t = useTranslations("Layout");
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const [open, setOpen] = useState(false);
 
   return (
     <>
       {isDesktop ? (
-        <Dialog open={open} onOpenChange={setOpen}>
+        <Dialog>
           <DialogTrigger asChild>
             <button 
               className={cn("fixed bottom-6 md:bottom-12 right-6 md:right-12 flex items-center p-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white rounded-full shadow-lg hover:from-purple-500 hover:via-pink-600 hover:to-red-600 focus:outline-none transition-all duration-200", font.className)}
@@ -51,7 +48,7 @@ const ContactButton = () => {
           </DialogContent>
         </Dialog>
       ) : (
-        <Drawer open={open} onOpenChange={setOpen}>
+        <Drawer>
           <DrawerTrigger asChild>
             <button 
               className={cn("fixed bottom-6 md:bottom-12 right-6 md:right-12 flex items-center p-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white rounded-full shadow-lg hover:from-purple-500 hover:via-pink-600 hover:to-red-600 focus:outline-none transition-all duration-200", font.className)}
