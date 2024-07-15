@@ -1,10 +1,10 @@
 // app/page.tsx
 
-import { Button } from "@/components/ui/button";
-import { ExpandableText } from '@/components/ui/text';
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from "next-intl/server";
+
 
 import ExperienceSection from "@/components/custom/experience-section";
 import SkillsSection from "@/components/custom/skills-section";
@@ -28,7 +28,12 @@ import skills from '@/assets/skills';
 
 
 
-export default function HomePage() { // Accept skills as a prop
+export default function HomePage({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) { // Accept skills as a prop
+  unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
   return (
     <div className="space-y-4 mt-12 w-full max-w-7xl p-3 md:p-0">

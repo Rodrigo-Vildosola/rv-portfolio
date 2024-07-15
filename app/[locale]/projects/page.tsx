@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 
 import Placeholder1 from "@/assets/images/projects/placeholder1.jpg"
 import Placeholder2 from "@/assets/images/projects/placeholder2.jpg"
+import { unstable_setRequestLocale } from "next-intl/server";
+
 
 
 const projects = [
@@ -26,7 +28,13 @@ const projects = [
   // Add more projects as needed
 ];
 
-export default function ProjectsPage() {
+export default function ProjectsPage({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  console.log(locale);
+  unstable_setRequestLocale(locale);
   const t = useTranslations("ProjectsPage");
   return (
     <div className="space-y-4 mt-12 w-full max-w-7xl mx-auto">
