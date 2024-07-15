@@ -12,8 +12,33 @@ import {
   DrawerTitle,
   DrawerDescription,
 } from '@/components/ui/drawer';
-import ContactForm from '@/components/forms/contact-form';
+import { Skeleton } from "@/components/ui/skeleton";
 import { useTranslations } from "next-intl";
+import dynamic from 'next/dynamic';
+
+
+const ContactForm = dynamic(() => import('@/components/forms/contact-form'), {
+  loading: () => (
+    <div className="max-w-2xl w-full mx-auto my-0 p-0 rounded-lg bg-white dark:bg-gray-950 outline-none border-none shadow-none">
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-32" /> {/* Label */}
+          <Skeleton className="h-10 w-full" /> {/* Input */}
+        </div>
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-32" /> {/* Label */}
+          <Skeleton className="h-10 w-full" /> {/* Input */}
+        </div>
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-32" /> {/* Label */}
+          <Skeleton className="h-24 w-full" /> {/* Textarea */}
+        </div>
+      </div>
+      <Skeleton className="h-10 w-full" /> {/* Submit Button */}
+    </div>
+  ), 
+  ssr: false,
+});
 
 const font = Poppins({
   subsets: ["latin"],

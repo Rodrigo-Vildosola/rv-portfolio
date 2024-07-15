@@ -105,6 +105,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
               alt="Me" 
               width={200}
               style={{ objectFit: 'cover', borderRadius: '10%' }} 
+              priority
             />
             <div className="ml-2 md:ml-4 flex flex-col justify-center">
               <p className={cn(`text-md md:text-2xl text-gray-900 dark:text-gray-300 text-right md:text-left`, font.className)}>
@@ -115,6 +116,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
                 alt="Me" 
                 width={200}
                 style={{ borderRadius: '10%' }} 
+                priority
               />
             </div>
           </div>
