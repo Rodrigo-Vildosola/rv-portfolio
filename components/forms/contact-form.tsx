@@ -1,5 +1,5 @@
 // components/forms/contact-form.tsx
-
+"use client";
 
 import * as z from "zod";
 import { useForm } from "react-hook-form";
