@@ -68,11 +68,11 @@ const ContactButton = () => {
               </DrawerDescription>
             </DrawerHeader>
             <ContactForm />
-            <DrawerFooter className="pt-2">
+            {/* <DrawerFooter >
               <DrawerClose asChild>
-                <button className="mt-4 w-full text-center text-blue-500">{t("close")}</button>
+                <button className=" w-full text-center text-blue-500">{t("close")}</button>
               </DrawerClose>
-            </DrawerFooter>
+            </DrawerFooter> */}
           </DrawerContent>
         </Drawer>
       )}
