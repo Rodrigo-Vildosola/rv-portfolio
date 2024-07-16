@@ -1,21 +1,14 @@
 // components/forms/contact-form.tsx
 "use client";
 
-import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
 
-import { ContactSchema } from "@/schemas";
-import { Input } from "@/components/ui/input";
+import { ContactSchema, ContactFormValues } from "@/schemas";
 import {
   Form,
-  FormField,
-  FormLabel,
-  FormControl,
-  FormItem,
-  FormMessage
 } from "@/components/ui/form";
 
 import { CardWrapper } from "@/components/custom/card-wrapper";
@@ -23,29 +16,32 @@ import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 import { contact } from "@/actions/contact";
-import { Textarea } from "@/components/ui/textarea";
+import ReusableFormField from "./reusable-form-field";
+import useEmailJS from "@/hooks/use-emailjs";
 
 const ContactForm = () => {
+  useEmailJS();
   const t = useTranslations("Layout.Form");
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
 
-  const form = useForm<z.infer<typeof ContactSchema>>({
+
+  const form = useForm<ContactFormValues>({
     resolver: zodResolver(ContactSchema),
     defaultValues: {
       name: "",
       email: "",
-      message: ""
+      message: "",
     },
   });
 
-  const onSubmit = (values: z.infer<typeof ContactSchema>) => {
+  const onSubmit = (values: ContactFormValues) => {
     setError("");
     setSuccess("");
 
-    startTransition(() => {
-      contact(values)
+    startTransition(async () => {
+      await contact(values)
         .then((data) => {
           if (data?.error) {
             setError(data?.error);
@@ -59,7 +55,7 @@ const ContactForm = () => {
         })
         .catch(() => {
           setError("An error occurred. Please try again.");
-        });
+        })
     });
   };
 
@@ -75,61 +71,29 @@ const ContactForm = () => {
           className="space-y-6"
         >
           <div className="space-y-4">
-            <FormField
+            <ReusableFormField 
               control={form.control}
               name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("name")}</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      disabled={isPending}
-                      placeholder="Rodrigo Vildosola"
-                      type="text"
-                      className="mt-1 block w-full shadow-lg"    
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              label="name"
+              placeholder="John Doe"
+              type="text"
+              isPending={ isPending}
             />
-            <FormField
+            <ReusableFormField 
               control={form.control}
               name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("email")}</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      disabled={isPending}
-                      placeholder="john.doe@email.com"
-                      type="email"
-                      className="mt-1 block w-full shadow-lg"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              label="email"
+              placeholder="john.doe@email.com"
+              type="email"
+              isPending={ isPending}
             />
-            <FormField
+            <ReusableFormField 
               control={form.control}
               name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("message")}</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      {...field}
-                      disabled={isPending}
-                      placeholder="Your message"
-                      className="mt-1 block w-full h-24 shadow-lg"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              label="message"
+              placeholder="Write here"
+              type="textarea"
+              isPending={ isPending}
             />
           </div>
           <FormError message={error} />

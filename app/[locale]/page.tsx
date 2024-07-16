@@ -62,7 +62,7 @@ export default function HomePage({
           </p>
         </div>
         <div className="md:w-1/2 p-8">
-          <Image src={Me} alt="About me" className="rounded-lg shadow-lg" />
+          <Image src={Me} alt="About me" quality={100} className="rounded-lg shadow-lg" priority/>
         </div>
       </Card>
 

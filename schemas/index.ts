@@ -4,8 +4,14 @@ import * as z from 'zod';
 export const ContactSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   email: z.string().email({ message: "Invalid email address" }),
+  // subject: z.string().min(5, { message: "Subject must be at least 5 characters" }),
   message: z.string().min(1, { message: "Message is required" }),
+  // phoneNumber: z.string().optional(),
+  // company: z.string().optional(),
 });
+
+export type ContactFormValues = z.infer<typeof ContactSchema>;
+
 
 export const LoginSchema = z.object({
   email: z.string().email(),

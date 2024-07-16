@@ -8,6 +8,7 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
+      "phoneNumber": "Phone number",
       "submit": "Send",
       "headerTitle": "Want to talk to me?"
     }

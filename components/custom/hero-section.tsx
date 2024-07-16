@@ -24,7 +24,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
     <Card className="mb-2 bg-white dark:bg-gray-900">
       <div className="flex flex-col h-full">
         {/* Top Section */}
-        <div className="flex h-48 md:h-64 rounded-md px-10 md:px-20 py-5 md:py-10 justify-center items-center relative ">
+        <div className="flex h-48 md:h-64 rounded-md px-10 md:px-20 py-5 justify-center items-center relative">
           <div className={cn("h-full w-full text-gray-100 dark:text-gray-100 bg-gradient-to-r from-blue-700 to-gray-900 dark:from-blue-700 dark:to-gray-900 rounded-md flex flex-col overflow-hidden justify-center items-center", font.className)}>
             <div className={cn(styles['move-left-to-right'], "text-xl whitespace-nowrap ")} style={{ animationDuration: `${getRandomSpeed()}s` }}>
               <span className="mx-6 md:mx-10">Unit Testing</span>
@@ -103,7 +103,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
             <Image 
               src={Me} 
               alt="Me" 
-              width={200}
+              width={280}
               style={{ objectFit: 'cover', borderRadius: '10%' }} 
               priority
             />
@@ -114,13 +114,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
               <Image 
                 src={Me} 
                 alt="Me" 
-                width={200}
+                width={180}
                 style={{ borderRadius: '10%' }} 
                 priority
               />
             </div>
           </div>
         </div>
+
       </div>
     </Card>
   );
