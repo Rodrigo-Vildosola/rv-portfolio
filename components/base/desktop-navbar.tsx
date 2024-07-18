@@ -70,7 +70,7 @@ const DesktopNavbar = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">
-            <Image src={getLanguageFlag(locale)} alt={getLanguageLabel(locale)} width={20} height={20} quality={10} loading="lazy"  className="mr-2" />
+            <Image src={getLanguageFlag(locale)} alt={getLanguageLabel(locale)} width={20} height={20} quality={10} loading="eager"  className="mr-2" />
             {getLanguageLabel(locale)}
           </Button>
         </DropdownMenuTrigger>
@@ -80,7 +80,7 @@ const DesktopNavbar = () => {
             disabled={locale === 'en'}
             className={locale === 'en' ? 'text-gray-400' : ''}
           >
-            <Image src={UK} alt="UK" width={20} height={20} quality={10} loading="lazy"   className="mr-2" />
+            <Image src={UK} alt="UK" width={20} height={20} quality={10} loading="eager"   className="mr-2" />
             {t('English')}
             {locale === 'en' && <CheckIcon className="ml-auto w-5 h-5" />}
           </DropdownMenuItem>
@@ -89,7 +89,7 @@ const DesktopNavbar = () => {
             disabled={locale === 'es'}
             className={locale === 'es' ? 'text-gray-400' : ''}
           >
-            <Image src={Spain} alt="Spain" width={20} height={20} quality={10} loading="lazy"   className="mr-2" />
+            <Image src={Spain} alt="Spain" width={20} height={20} quality={10} loading="eager"   className="mr-2" />
             {t('Spanish')}
             {locale === 'es' && <CheckIcon className="ml-auto w-5 h-5" />}
           </DropdownMenuItem>

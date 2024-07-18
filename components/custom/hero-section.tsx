@@ -87,7 +87,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ font }) => {
 
         <div className="flex flex-col md:flex-row h-full">
           {/* Bottom Left Section */}
-          <div className="w-full md:w-full flex flex-col p-4">
+          <div className="w-full md:w-full flex flex-col px-4 py-4 md:py-12">
             <div className="flex md:ml-20">
               <p className={cn("inline-block text-md md:text-xl font-semibold text-white dark:text-gray-900 bg-gray-900 dark:bg-white p-1 rounded", font.className)}>
                 {t("subtitle")}

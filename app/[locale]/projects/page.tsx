@@ -33,7 +33,6 @@ export default function ProjectsPage({
 }: {
   params: { locale: string };
 }) {
-  console.log(locale);
   unstable_setRequestLocale(locale);
   const t = useTranslations("ProjectsPage");
   return (

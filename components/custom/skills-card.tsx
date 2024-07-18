@@ -22,7 +22,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, description }) => {
                 width={50} 
                 height={50}
                 className="object-contain p-1 rounded-md" 
-                loading="lazy"
+                loading="eager"
                 onLoad={() => console.log(skill.name)}
               />
             )}

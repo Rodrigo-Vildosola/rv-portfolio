@@ -1,8 +1,10 @@
 // components/custom/skills-section.tsx
-
+import React, { lazy, Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { SkillCategory } from "@/assets/skills";
-import SkillsCaroussel from "@/components/custom/skills-caroussel"; // Ensure this path is correct
+import LoadingSpinner from "@/components/custom/loader"; // Create a simple spinner component
+
+const SkillsCaroussel = lazy(() => import("@/components/custom/skills-caroussel"));
 
 interface SkillsSectionProps {
   skills: SkillCategory[];
@@ -18,9 +20,9 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
         <div key={categoryIndex} className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">{t(category.category)}</h2>
           <div className="relative">
-            <SkillsCaroussel
-              categoryItems={category.items}
-            />
+            <Suspense fallback={<LoadingSpinner />}>
+              <SkillsCaroussel categoryItems={category.items} />
+            </Suspense>
           </div>
         </div>
       ))}
